@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    name: mydev
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    dbcp2:
+      min-idle: 2
+      initial-size: 2
+      time-between-eviction-runs-millis: 3000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'ZTM' FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+    sql-script-encoding: UTF-8
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database: mysql
+  profiles:
+    active: dev
+
+mybatis:
+  mapper-locations: classpath*:com/opensource/blog/**/mapper/*Mapper.xml
+
+pagehelper:
+  helper-dialect: mysql
+blog:
+  web-url: 127.0.0.1
+  web-site: E:\Users\shasha\Desktop\websit\
+  cache-ftl: false
