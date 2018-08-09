@@ -36,4 +36,10 @@ public class FtlController {
         ftlService.createTag();
         return BaseResponse.successJson();
     }
+
+    @RequestMapping("/write")
+    public String write(){
+        ftlService.write();
+        return BaseResponse.successJson();
+    }
 }

@@ -41,4 +41,10 @@ public class FtlService {
         return true;
     }
 
+    public Boolean write() {
+        logger.info("创建blog页面");
+        Map<String, Object> dataSource = new HashMap<>();
+        FreemarkerHelper.createHtml("write",dataSource,"write");
+        return true;
+    }
 }

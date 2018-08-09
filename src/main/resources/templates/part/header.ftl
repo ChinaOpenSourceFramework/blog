@@ -29,10 +29,10 @@
                 <button class="btn btn-outline-info my-2 mr-sm-2" >写文章</button>
             </li>
             <li class="nav-item">
-                <button class="btn btn-outline-info my-2 mr-sm-2" >注册</button>
+                <button class="btn btn-outline-info my-2 mr-sm-2" type="button"  data-toggle="modal" data-target="#registerDiv">注册</button>
             </li>
             <li class="nav-item">
-                <button class="btn btn-outline-info my-2 mr-sm-2" >登录</button>
+                <button class="btn btn-outline-info my-2 mr-sm-2" type="button"  data-toggle="modal" data-target="#loginDiv">登录</button>
             </li>
             <li class="nav-item">
                 <div class="btn-group my-2 mr-sm-2">
@@ -48,3 +48,69 @@
 
     </div>
 </nav>
+
+<!-- login Modal -->
+<div class="modal fade" id="loginDiv" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">登录</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="login">
+                    <div class="form-group">
+                        <label for="username">登录名</label>
+                        <input type="text" class="form-control" name="loginName" placeholder="登录名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" class="form-control" name="password" placeholder="密码">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="remember">
+                        <label class="form-check-label" for="remember">记住我</label>
+                    </div>
+                    <button type="button" onclick="login()" class="btn btn-primary">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- register Modal -->
+<div class="modal fade" id="registerDiv" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">注册</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="register">
+                    <div class="form-group">
+                        <label for="username">登录名</label>
+                        <input type="text" class="form-control" name="loginName" placeholder="登录名">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" class="form-control" name="nickname" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" class="form-control" name="password" placeholder="密码">
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="remember">
+                        <label class="form-check-label" for="remember">同意《用户协议》《隐私政策》</label>
+                    </div>
+                    <button type="button" onclick="register()" class="btn btn-primary">注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
