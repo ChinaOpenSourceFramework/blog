@@ -15,7 +15,7 @@ public class SimpleShiroFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 
-		response.addHeader("Access-Control-Allow-Origin", "*");
+		response.addHeader("Access-Control-Allow-Origin", "http://127.0.0.1");
 		response.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE,OPTIONS");
 		response.addHeader("Access-Control-Allow-Headers", "Content-Type,X-Requested-With");
 		response.addHeader("Access-Control-Allow-Credentials", "true");

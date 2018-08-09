@@ -3,6 +3,7 @@ package com.opensource.blog.controller;
 import com.opensource.blog.common.BaseResponse;
 import com.opensource.blog.common.ErrorMessage;
 import com.opensource.blog.service.UserService;
+import com.opensource.blog.shiro.ShiroUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -27,18 +28,17 @@ public class LoginController {
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
     @Autowired
     private UserService userService;
-    @RequestMapping("/test")
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
     public String test(){
-        logger.info("测试方法");
-        userService.test();
+        logger.info("测试方法,用户ID"+ShiroUser.getUserId());
         return BaseResponse.successJson();
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(String username ,String password ,@RequestParam(defaultValue = "false") Boolean remember){
-        logger.info("登录信息 ————>  用户名:{},密码:{},记住我:{}",username,password,remember);
+    public String login(String loginName ,String password ,@RequestParam(defaultValue = "false") Boolean remember){
+        logger.info("登录信息 ————>  用户名:{},密码:{},记住我:{}",loginName,password,remember);
         Subject user = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(username,password);
+        UsernamePasswordToken token = new UsernamePasswordToken(loginName,password);
         Map<String,String> param = new HashMap<>();
         try
         {
