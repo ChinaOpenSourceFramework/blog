@@ -51,6 +51,6 @@ public class LoginController {
             logger.error(e.getMessage(), e);
             return BaseResponse.errorJson(ErrorMessage.ERR_PARAM_ERROR);
         }
-        return BaseResponse.successJson();
+        return BaseResponse.successJson(ShiroUser.getUser());
     }
 }

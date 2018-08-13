@@ -8,12 +8,17 @@ public class ShiroUser {
 
     public static User getUser(){
         Subject subject= SecurityUtils.getSubject();
-        if(subject==null)
+        if(subject==null){
             return null;
-        return (User) subject.getPrincipal();
+        }
+        User user = (User) subject.getPrincipal();
+        user.setPassword(null);
+        user.setSalt(null);
+        return user;
+
     }
 
     public static Long getUserId(){
-        return getUser().getId();
+        return getUser() == null ? null :getUser().getId();
     }
 }

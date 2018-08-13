@@ -25,18 +25,18 @@
         </form>
 
         <ul class="navbar-nav mt-2 mt-lg-0">
-            <li class="nav-item">
-                <button class="btn btn-outline-info my-2 mr-sm-2" >写文章</button>
+            <li class="nav-item login">
+                <a href="http://127.0.0.1/write.html"><button class="btn btn-outline-info my-2 mr-sm-2" >写文章</button></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item unlogin">
                 <button class="btn btn-outline-info my-2 mr-sm-2" type="button"  data-toggle="modal" data-target="#registerDiv">注册</button>
             </li>
-            <li class="nav-item">
+            <li class="nav-item unlogin">
                 <button class="btn btn-outline-info my-2 mr-sm-2" type="button"  data-toggle="modal" data-target="#loginDiv">登录</button>
             </li>
-            <li class="nav-item">
+            <li class="nav-item login">
                 <div class="btn-group my-2 mr-sm-2">
-                    <img class="img-fluid rounded-circle dropdown-toggle" src="img/logo-s.png"  style="height: 36px;width: 36px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-fluid rounded-circle dropdown-toggle" id = "userPhoto" src=""  style="height: 36px;width: 36px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="dropdown-menu dropdown-menu-right">
                         <button class="dropdown-item" type="button">个人信息</button>
                         <button class="dropdown-item" type="button">修改密码</button>

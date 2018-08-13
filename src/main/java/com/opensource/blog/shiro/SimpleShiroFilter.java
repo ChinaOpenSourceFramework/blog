@@ -17,7 +17,7 @@ public class SimpleShiroFilter extends OncePerRequestFilter {
 
 		response.addHeader("Access-Control-Allow-Origin", "http://127.0.0.1");
 		response.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE,OPTIONS");
-		response.addHeader("Access-Control-Allow-Headers", "Content-Type,X-Requested-With");
+		response.addHeader("Access-Control-Allow-Headers", "Content-Type,X-File-Name,X-Requested-With");
 		response.addHeader("Access-Control-Allow-Credentials", "true");
 		response.addHeader("Access-Control-Max-Age", "1800");// 30 min
 		if (request.getMethod().equals("OPTIONS")) {

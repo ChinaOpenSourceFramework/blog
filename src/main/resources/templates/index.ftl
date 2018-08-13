@@ -316,5 +316,6 @@
 <!-- jQuery first, then Bootstrap JS -->
 <script src="node_modules/jquery/dist/jquery.js" ></script>
 <script src="node_modules/bootstrap/js/bootstrap.js" ></script>
+<script src="js/common.js" ></script>
 </body>
 </html>

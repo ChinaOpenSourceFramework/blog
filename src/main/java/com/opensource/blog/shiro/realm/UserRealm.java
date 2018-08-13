@@ -32,11 +32,8 @@ public class UserRealm extends AuthorizingRealm {
         if(user == null) {
             throw new UnknownAccountException();//没找到帐号
         }
-        User u  = new User();
-        u.setId(user.getId());
-		u.setLoginName(user.getLoginName());
       //将查询到的用户账号和密码存放到 authenticationInfo用于后面的权限判断。第三个参数传入realName。
-        AuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(u, //用户名
+        AuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user, //用户名
                 user.getPassword(),
                 ByteSource.Util.bytes(user.getCredentialsSalt()),//salt=username+salt
                 getName()  //realm name
