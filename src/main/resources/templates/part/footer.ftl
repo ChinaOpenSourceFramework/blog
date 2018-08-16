@@ -2,7 +2,7 @@
     <footer class="pt-4 pt-md-5 pb-md-5" >
         <div class="row justify-content-center">
             <div class="col-6 col-md text-center">
-                <img class="mb-2" src="img/logo.jpg" alt="" width="34" height="34">
+                <img class="mb-2" src="http://${staticUrl}/img/logo.jpg" alt="" width="34" height="34">
                 <small class="d-block mb-3 text-muted">&copy; 2017-2018 皖ICP备17027939号</small>
             </div>
             <div class="col-6 col-md">

@@ -25,12 +25,6 @@ public class FtlController {
         return BaseResponse.successJson();
     }
 
-    @RequestMapping("/blog")
-    public String blog(){
-        ftlService.createBlog();
-        return BaseResponse.successJson();
-    }
-
     @RequestMapping("/tag")
     public String tag(){
         ftlService.createTag();

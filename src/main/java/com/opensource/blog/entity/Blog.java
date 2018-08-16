@@ -18,6 +18,10 @@ public class Blog {
     @Lob
     private String content;
 
+    private String imgUrl;
+
+    private String contentPart;
+
     private String location;
 
     private Integer status;
@@ -108,5 +112,21 @@ public class Blog {
 
     public void setDeleteFlag(Boolean deleteFlag) {
         this.deleteFlag = deleteFlag;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getContentPart() {
+        return contentPart;
+    }
+
+    public void setContentPart(String contentPart) {
+        this.contentPart = contentPart;
     }
 }

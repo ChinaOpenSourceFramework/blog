@@ -6,63 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
     <title>Tomcat安装和配置</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="node_modules/Font-Awesome-3.2.1/css/font-awesome.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="http://${staticUrl}/node_modules/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="http://${staticUrl}/node_modules/Font-Awesome-3.2.1/css/font-awesome.css">
+    <link rel="stylesheet" href="http://${staticUrl}/css/main.css">
 
 </head>
 <body>
 
 <#include "part/header.ftl" encoding="UTF-8">
 
-<img src="img/ad-l.jpg" style="width: 100%;height: 100px;">
+<img src="http://${staticUrl}/img/ad-l.jpg" style="width: 100%;height: 100px;">
 <main role="main" class="py-3 container-fluid">
     <div class="row">
         <div class="col-md-9">
             <div class="p-3 mb-3 bg-light rounded">
-                <h3>这是个标题</h3>
+                <h3>${blog.title}</h3>
                 <p>2018年04月12日 10:44:05&nbsp;&nbsp;喜欢:4213 &nbsp;&nbsp;收藏:4213 &nbsp;&nbsp;阅读量:4213</p>
                 <hr>
-                最新一期《放开我北鼻》中，哥哥和北鼻们登上了少林寺学武功，哥哥一组宝宝们一组先从基本的拉筋扎马步开始，
-                陈学冬黄景瑜周震南三位哥哥之前都有过帅气逼人的武打表演，这次学习武功，却让他们体会到了什么是真正的基本功。
-                拉筋环节陈学冬就因为筋太硬完成的十分艰难，但他还是努力按照师傅最严格的要求，标准的完成了动作。
-                在吃斋饭的时候因为师傅教导不能剩饭，而宝宝们习惯了挑食和剩菜，陈学冬只好耐心的教导北鼻们，
-                你一口我一口的完成了，温柔中包含着严厉，教育方式获得大家的赞扬。
-                解释一下：
-                node_modules：是依赖包
-                public：存放的是生成的页面
-                scaffolds：命令生成文章等的模板
-                source：用命令创建的各种文章
-                themes：主题
-                _config.yml：整个博客的配置
-                db.json：source解析所得到的
-                package.json：项目所需模块项目的配置信息
-
-                第二步去github创建自己的仓库
-                创建一个repo，名称为yourname.github.io, 其中yourname是你的github名称，按照这个规则创建才有用哦，如下
-
-
-                hexo2.png
-                创建一个repo，名称为yourname.github.io, 其中yourname是你的github名称，按照这个规则创建才有用哦，如下(因为重要所以重复两遍)
-
-
-                hexo3.png
-                仓库创建好后回到gitbash中，配置github账户信息（YourName和YourEail都替换成你自己的）：
-
-
-                username.png
-                email.png
-                第三步创建SSH
-                在gitbash中输入：ssh-keygen -t rsa -C "youremail@example.com"，然后一顿回车键生成ssh。
-
-                然后cd ~/.ssh 然后 cat id_rsa.pub找到id_rsa.pub文件的内容。记住记住，当文件内容出来后需要全部粘贴从ssh-rsa一直到最后。
-
-                第四步将上面获取的ssh放到github中
-
-                作者：Brighten_Sun
-                链接：https://www.jianshu.com/p/adf65cbad393
-                來源：简书
-                简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+                ${blog.content}
                 <hr>
                 <p>
                     <button type="button" class="btn btn-outline-primary m-1"><i class="icon-heart"></i>喜欢</button>
@@ -80,7 +41,7 @@
                     <button type="submit" class="btn btn-primary">提交</button>
                     <ul class="list-unstyled my-3">
                         <li class="media">
-                            <img class="img-fluid rounded-circle mr-3" src="img/photo.jpg" style="height: 36px;width: 36px;"  alt="Generic placeholder image">
+                            <img class="img-fluid rounded-circle mr-3" src="http://${staticUrl}/img/photo.jpg" style="height: 36px;width: 36px;"  alt="Generic placeholder image">
                             <div class="media-body">
                                 <h5 class="mt-0 mb-1">李其伟<span class="d-inline-block float-right small">2017/7/25 22:38</span></h5>
                                 简单说两句
@@ -93,7 +54,7 @@
                             </div>
                         </li>
                         <li class="media">
-                            <img class="img-fluid rounded-circle mr-3" src="img/photo.jpg" style="height: 36px;width: 36px;"  alt="Generic placeholder image">
+                            <img class="img-fluid rounded-circle mr-3" src="http://${staticUrl}/img/photo.jpg" style="height: 36px;width: 36px;"  alt="Generic placeholder image">
                             <div class="media-body">
                                 <h5 class="mt-0 mb-1">李其伟<span class="d-inline-block float-right small">2017/7/25 22:38</span></h5>
                                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -106,7 +67,7 @@
                             </div>
                         </li>
                         <li class="media">
-                            <img class="img-fluid rounded-circle mr-3" src="img/photo.jpg" style="height: 36px;width: 36px;"  alt="Generic placeholder image">
+                            <img class="img-fluid rounded-circle mr-3" src="http://${staticUrl}/img/photo.jpg" style="height: 36px;width: 36px;"  alt="Generic placeholder image">
                             <div class="media-body">
                                 <h5 class="mt-0 mb-1">李其伟<span class="d-inline-block float-right small">2017/7/25 22:38</span></h5>
                                 你好啊 in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -124,7 +85,7 @@
             <div class="p-3 mb-3 bg-light rounded">
                 <ul class="list-unstyled">
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -132,7 +93,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -140,7 +101,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -148,7 +109,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -156,7 +117,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -164,7 +125,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -172,7 +133,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -180,7 +141,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -188,7 +149,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -196,7 +157,7 @@
                         </div>
                     </li>
                     <li class="media my-4">
-                        <img class="mr-3" src="img/photo.jpg" alt="Generic placeholder image">
+                        <img class="mr-3" src="http://${staticUrl}/img/photo.jpg" alt="Generic placeholder image">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">List-based media object</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus
@@ -210,7 +171,7 @@
             <div class="p-3 mb-3 bg-light rounded">
                 <div class="card">
                     <h5 class="card-header">
-                        <img class="m-sm-1 rounded-circle" src="img/logo-s.png"  style="height: 36px;width: 36px;" >
+                        <img class="m-sm-1 rounded-circle" src="http://${staticUrl}/img/logo-s.png"  style="height: 36px;width: 36px;" >
                         李其伟
                         <a href="#" class="btn btn-outline-info float-right"><i class="icon-plus"></i>关注</a>
                     </h5>
@@ -263,7 +224,7 @@
             </div>
 
             <div class="p-3 mb-3 bg-light rounded">
-                <img src="img/ad.jpg" style="width: 100%">
+                <img src="http://${staticUrl}/img/ad.jpg" style="width: 100%">
             </div>
 
             <div class="p-3">
@@ -302,7 +263,8 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Bootstrap JS -->
-<script src="node_modules/jquery/dist/jquery.js" ></script>
-<script src="node_modules/bootstrap/js/bootstrap.js" ></script>
+<script src="http://${staticUrl}/node_modules/jquery/dist/jquery.js" ></script>
+<script src="http://${staticUrl}/node_modules/bootstrap/js/bootstrap.js" ></script>
+<script src="http://${staticUrl}/js/common.js" ></script>
 </body>
 </html>

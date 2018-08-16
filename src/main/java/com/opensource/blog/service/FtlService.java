@@ -25,14 +25,6 @@ public class FtlService {
         return true;
     }
 
-    public Boolean createBlog(){
-        logger.info("开始创建详情页");
-        Map<String, Object> dataSource = new HashMap<>();
-        String path = PathUtil.blogPath()+UUID.randomUUID().toString();
-        FreemarkerHelper.createHtml("detail",dataSource, path);
-        return true;
-    }
-
     public Boolean createTag(){
         logger.info("开始创建标签页");
         Map<String, Object> dataSource = new HashMap<>();
